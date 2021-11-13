@@ -1,3 +1,4 @@
+asdas
 # Setup
 ---
 
@@ -133,6 +134,18 @@ The `docker` group is created, but no users are added to the group. Add your use
 sudo usermod -aG docker $(whoami)
 ```
 
+---
+## Windows
+
+
+### Pre-requisites
+- WSL 2 Backend: install [here](https://docs.microsoft.com/en-us/windows/wsl/install)
+- Linux kernel update package: install [here](https://docs.microsoft.com/en-gb/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
+
+Windows Subsystem for Linux (WSL) 2 introduces a significant architectural change as it is a full Linux kernel built by Microsoft, allowing Linux containers to run natively without emulation. With Docker Desktop running on WSL2, users are leverage Linux workspaces and avoid having to maintain both Linux and Windows build scripts. WSL2 provides improvements to file system sharing, boot time, and allows access to some cool new features. 
+
+### Installation
+Follow the guide by `docker` docs [here](https://docs.docker.com/desktop/windows/install/)
 
 ---
 

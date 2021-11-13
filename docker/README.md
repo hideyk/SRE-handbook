@@ -88,8 +88,6 @@ To find out more about basic scheduling, container grouping and cluster manageme
 
 ---
 
-## Best practices
-
 
 
 ---
