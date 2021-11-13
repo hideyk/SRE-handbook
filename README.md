@@ -1,7 +1,7 @@
 # SRE Handbook
 ---
 
-![](static/sre-banner.PNG)
+![](static/sre-banner.png)
 
 #### Author: Hideyuki Kanazawa (Site Reliability Engineer @ DBS Bank)
 
