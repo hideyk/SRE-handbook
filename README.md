@@ -1,11 +1,16 @@
 # SRE Handbook
+---
 
 ![](static/sre-banner.PNG)
 
 #### Author: Hideyuki Kanazawa (Site Reliability Engineer @ DBS Bank)
 
+
+<br>
+
 ---
 
+## Introduction
 Herein documents my personal journey on learning Site Reliability Engineering best practices and condensed information for each SRE enabling software. 
 
 <br>
