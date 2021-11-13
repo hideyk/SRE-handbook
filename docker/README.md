@@ -7,6 +7,7 @@
 Docker simplifies the process of managing application processes in distributed environments. It accomplishes this by packaging components and their dependencies into standardized, isolated, lightweight process environments called containers. They're similar to virtual machines, but more portable, resource-friendly, and less dependent on the host operating system. 
 
 ![](static/docker-overview.PNG)
+
 In this above image, we can see how containers relate to the host system. Containers isolate individual applications and use operating system resources that have been abstracted by Docker. In the exploded view on the right, we can see that containers can be built by "layering", with multiple containers sharing underlying layers, decreasing resource usage. 
 
 - **Lightweight resource utilization**: instead of virtualizing an entire operating system, containers isolate at the process level and use the host's kernel
@@ -64,6 +65,7 @@ For a more in-depth look at the different approaches to networking with Docker, 
 ### Scheduling, Cluster Management, and Orchestration
 
 ![](static/docker-scheduling.PNG)
+
 The image above demonstrates a simplified scheduling decision. The request is given through an API or management tool. From here, the scheduler evaluates the conditions of the request and the state of the available hosts. In this example, it pulls information about container density from a distributed data store / discovery service so that it can place the new application on the least busy host. 
 
 This host selection process is one of the core responsibilities of the scheduler. Usually, it has functions that automate the process with the administrator having the option to specify certain constraints. These might include:
