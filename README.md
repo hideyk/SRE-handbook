@@ -35,6 +35,19 @@ While the content here do include my experience and sentiments, **most** of the 
 
 ## Site Reliability Engineer tools
 
+## Technology stack
+Ansible | Bash | Cloud | Docker | Elasticsearch | Git
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="static/ansible.png" width="100">  |  <img src="static/bash.png" width="100"> | <img src="static/aws.jpg" width="100"> | <img src="static/docker.png" width="100"> | <img src="static/elasticsearch.png" width="100"> | <img src="static/git.png" width="100">
+
+Go | Grafana | Jenkins | Kafka | Kubernetes | Nginx
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="static/go.png" width="100">  |  <img src="static/grafana.jpg" width="100"> | <img src="static/jenkins.png" width="100"> | <img src="static/kafka.png" width="100"> | <img src="static/kubernetes.png" width="100"> | <img src="static/nginx.png" width="100">
+
+Prometheus | Python | Terraform | - | - | -
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="static/prometheus.png" width="100">  |  <img src="static/python.png" width="100"> | <img src="static/terraform.png" width="100"> 
+
 - Docker
 - Kubernetes
 - High-level backend programming language (Python, Go, C++)
