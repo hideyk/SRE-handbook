@@ -5,10 +5,6 @@
 
 #### Author: Hideyuki Kanazawa (Site Reliability Engineer @ DBS Bank)
 
-<div class="md-source__repository">
-    ethhub-io/ethhub
-</div>
-
 <br>
 
 ---
