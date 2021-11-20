@@ -3,6 +3,13 @@
     <div class="row">
       <div class="col-6 col-sm-4 text-xs-center order-sm-2">
         <ul class="list-inline mb-0">  
+          {% if site.personal %}
+            <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="LinkedIn" data-original-title="Portfolio">
+              <a class="text-white" target="_blank" href="{{ site.personal }}">
+                <i class="far fa-address-book"></i>
+              </a>
+            </li>
+          {% endif %}
           {% if site.twitter %}
             <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Twitter" data-original-title="Twitter">
               <a class="text-white" target="_blank" href="https://twitter.com/{{ site.twitter }}">
@@ -29,7 +36,7 @@
       <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
         <ul class="list-inline mb-0">  
           <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="GitHub" data-original-title="GitHub">
-            <a class="text-white" target="_blank" href="{{ site.repo }}">
+            <a class="text-white" target="_blank" href="https://github.com/{{ site.github }}">
               <i class="fab fa-github"></i>
             </a>
           </li>

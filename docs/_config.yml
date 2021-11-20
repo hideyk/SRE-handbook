@@ -35,8 +35,9 @@ github_repo: "SRE-handbook"
 github_branch: "master"
 
 # Optional
-twitter: vsoch
-linkedin: vsochat
+personal: https://kanazawahideyuki.com
+github: hideyukikanazawa
+linkedin: hideyuki-kanazawa
 dockerhub: awazanak
 
 # Should there be feedback buttons at the bottom of pages?
