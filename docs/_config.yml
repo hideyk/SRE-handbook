@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Docsy Jekyll
-email: your-email@domain.com
-author: Dinosaur Avocado
+title: SRE Handbook
+email: kanazawahideyuki@gmail.com
+author: Hideyuki Kanazawa
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -30,14 +30,14 @@ url: "https://hideyukikanazawa.github.io/SRE-handbook" # the base hostname & pro
 
 # Social (First three Required)
 repo: "https://github.com/hideyukikanazawa/SRE-handbook"
-github_user: "vsoch"
-github_repo: "docsy-jekyll"
+github_user: "hideyukikanazawa"
+github_repo: "SRE-handbook"
 github_branch: "master"
 
 # Optional
 twitter: vsoch
 linkedin: vsochat
-dockerhub: vanessa
+dockerhub: awazanak
 
 # Should there be feedback buttons at the bottom of pages?
 feedback: true
