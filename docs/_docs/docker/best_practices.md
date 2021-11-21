@@ -18,9 +18,13 @@ Docker builds images automatically by reading the instructions from a `Dockerfil
 
 A Docker image consists of read-only layers each of which represents a Dockerfile instruction. Layers are stacked and each one is a delta of the changes from the previous layer. 
 
+<br>
+
 ---
 
 ## 1. Avoid unnecessary privileges
+
+<br>
 
 ### 1.1 Rootless containers
 A recent report highlighted that 58% of images are running the container entrypoint as **root (UID 0)**. 
@@ -38,10 +42,16 @@ This will block the executing user from modifying existing binaries or scripts. 
 
 The *app* user only needs execution permissions on the file, **not ownership**.
 
+<br><br>
+
+---
+
 ## 2. Reduce attack surface
 It is a Dockerfile best practice to **keep the images minimal**.
 
 Avoid including unnecessary packages or exposing ports to reduce the attack surface. The most components you include, the most exposed your system will be and the harder it is to maintain. 
+
+<br>
 
 ### 2.1 Multi-stage builds
 [Multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) allow you to drastically reduce the size of your final image, without struggling to reduce the number of itermediate layers and files. 
@@ -52,7 +62,10 @@ By leveraging build cache, you may order layers from the less frequently changed
 - Generate your application
 
 Example for a Go application could look like:
+
 ![](static/docker-go-dockerfile.PNG)
+
+<br>
 
 ### 2.2 Use trusted base images
 Building on top of untrusted or unmaintained images will inherit all of the problems and vulnerabilities from that image into your containers.
@@ -60,6 +73,7 @@ Building on top of untrusted or unmaintained images will inherit all of the prob
 - Prefer *verified* and *official* images from trusted repositories
 - Sometimes the *official* images might not be the **better fit**, in regards to security and minimalism. For example, the [bitnami/node](https://hub.docker.com/r/bitnami/node/) image offers customized versions on top of a minideb distribution as compared to the [official node image](https://hub.docker.com/_/node)
 
+<br>
 
 ### 2.3 Update your images frequently 
 Define a versioning strategy
@@ -67,14 +81,16 @@ Define a versioning strategy
 - **Plan in advance**: be ready to drop old versions and migrate before your base image version reaches end of life support
 - **Rebuild your own images periodically** with a similar strategy to get the latest packages from the base images. 
 
+<br>
+
 ### 2.4 Exposed ports
 Expose only the ports that your application needs and avoid exposting ports like SSH (22). You may run `docker run --publish-all` to expose all ports for connections, if you're confident with the `EXPOSE` commands in Dockerfile.
 
-<br>
+<br><br>
 
 ---
 
-## 3 Prevent confidential data leaks
+## 3. Prevent confidential data leaks
 
 <br>
 
@@ -102,47 +118,48 @@ By intentionally specifying the build context, we exclude unnecessary files and 
 ### 3.3. Exclude with .dockerignore
 To exclude files not relevant to the build, use a .dockerignore file. The file supports exclusion patterns similar to .gitignore files.
 
-<br>
+<br><br>
 
 ---
 
-## 4. Others
+## 4. Beyond image building
 
-<br>
-
-### 4.1 Don't install unnecessary packages
-To reduce complexity, dependencies, file sizes, and build times, avoid installing extra or unnecessary packages. 
-
-<br>
-
-### 4.2 Decouple applications
-Each container should have only one concern. Decoupling applications into multiple containers makes it easier to scale horizontally and reuse containers. 
-
-<br>
-
-### 4.3 Linting
-Tools like [Haskell Dockerfile Linter (hadolinter)](https://github.com/hadolint/hadolint) detect bad practices in your Dockerfile and even expose issues inside the shell commands executed by the `RUN` instruction. 
-
-Consider incorporating such a tool in your CI pipelines.
-
-<br>
-
----
-
-## 5. Beyond image building
-
-### 5.1 Sign images and verify signatures
+### 4.1 Sign images and verify signatures
 It is one of Dockerfile best practices to use [docker content trust](https://docs.docker.com/engine/security/trust/)., Docker notary, Harbor notary, or similar tools to **digitally sign your images** and then **verify them on runtime**. 
 
 <br>
 
-### 5.2 Include health / liveness checks
+### 4.2 Include health / liveness checks
 When using plain Docker or Docker Swarm, [include a HEALTHCHECK instruction](https://docs.docker.com/engine/reference/builder/#healthcheck) in your Dockerfile whenever possible. This is critical for long running or persistent services in order to ensure they're healthy, and manage restarting the service otherwise. 
 
 If running your images in Kubernetes, [use livenessProbe configuration](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) inside the container definitions, as the docker HEALTHCHECK instruction wont be applied. 
 
+<br><br>
+
+---
+
+## 5. Others
 
 <br>
+
+### 5.1 Don't install unnecessary packages
+To reduce complexity, dependencies, file sizes, and build times, avoid installing extra or unnecessary packages. 
+
+<br>
+
+### 5.2 Decouple applications
+Each container should have only one concern. Decoupling applications into multiple containers makes it easier to scale horizontally and reuse containers. 
+
+<br>
+
+### 5.3 Linting
+Tools like [Haskell Dockerfile Linter (hadolinter)](https://github.com/hadolint/hadolint) detect bad practices in your Dockerfile and even expose issues inside the shell commands executed by the `RUN` instruction. 
+
+Consider incorporating such a tool in your CI pipelines.
+
+<br><br>
+
+
 
 ### FROM
 Whenever possible, use current official images as the basis for your images. Alpine image is recommended as it is tightly controlled and small in size (currently under 6 MB), while still being a full Linux distribution.

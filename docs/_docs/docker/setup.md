@@ -1,5 +1,5 @@
 ---
-title: Docker - Setup
+title: Setup
 tags: 
  - docker
 description: Setting up Docker
