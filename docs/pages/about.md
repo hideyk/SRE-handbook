@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /docs/about/
+permalink: /about/
 ---
 
 # About

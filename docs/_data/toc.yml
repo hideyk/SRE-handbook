@@ -24,6 +24,8 @@
       url: "docs/docker/setup"
     - title: "Configure"
       url: "docs/docker/configure"
+    - title: "Best Practices"
+      url: "docs/docker/best_practices"
     - title: "Monitor"
       url: "docs/docker/monitor"
     - title: "Using Docker in production"

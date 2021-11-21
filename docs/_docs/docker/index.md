@@ -72,7 +72,7 @@ For a more in-depth look at the different approaches to networking with Docker, 
 
 ### Scheduling, Cluster Management, and Orchestration
 
-![](assets/static/docker/docker-scheduling.PNG)
+![](static/docker-scheduling.PNG)
 
 The image above demonstrates a simplified scheduling decision. The request is given through an API or management tool. From here, the scheduler evaluates the conditions of the request and the state of the available hosts. In this example, it pulls information about container density from a distributed data store / discovery service so that it can place the new application on the least busy host. 
 
