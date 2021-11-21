@@ -31,6 +31,8 @@
           url: "docs/docker/setup#windows"
     - title: "Configure"
       url: "docs/docker/configure"
+    - title: "Common commands"
+      url: "docs/docker/common_commands"
     - title: "Best Practices"
       url: "docs/docker/best_practices"
       children:
