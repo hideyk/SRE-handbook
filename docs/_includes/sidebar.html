@@ -19,7 +19,7 @@
         <li class="td-sidebar-nav__section-title">
           <a  href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">{{ section.title }}</a>
         </li>
-        {% if section.links %}
+        {% if section.links and page.url contains section.url %}
           <ul>
             <li class="collapse show" id="{{ section.title | slugify }}">
               <ul class="td-sidebar-nav__section pr-md-3">

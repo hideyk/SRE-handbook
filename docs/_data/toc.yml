@@ -1,4 +1,4 @@
-- title: Documentation
+- title: Quicklink
   url: docs
   links:
     - title: "Getting Started"
@@ -12,8 +12,23 @@
           url: "docs/getting-started#customization"
     - title: "About"
       url: "about"
-    - title: "News"
-      url: "news"
+    - title: "Blog"
+      url: "blog"
+
+- title: "Docker"
+  url: "docs/docker/index"
+  links:
+    - title: "Introduction"
+      url: "docs/docker/index"
+    - title: "Set-Up"
+      url: "docs/docker/setup"
+    - title: "Configure"
+      url: "docs/docker/configure"
+    - title: "Monitor"
+      url: "docs/docker/monitor"
+    - title: "Using Docker in production"
+      url: "docs/docker/production"
+
 - title: "Extras"
   url: "docs/extras"
   links:
