@@ -22,6 +22,13 @@
       url: "docs/docker/index"
     - title: "Set-Up"
       url: "docs/docker/setup"
+      children:
+        - title: "Ubuntu"
+          url: "docs/docker/setup#ubuntu"
+        - title: "Fedora"
+          url: "docs/docker/setup#fedora"
+        - title: "Windows"
+          url: "docs/docker/setup#windows"
     - title: "Configure"
       url: "docs/docker/configure"
     - title: "Best Practices"

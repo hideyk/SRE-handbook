@@ -5,16 +5,16 @@ tags:
 description: Setting up Docker
 ---
 
-# Setup
+# Docker Set-up
+
+
 ---
 
-
-## Ubuntu
+## **Ubuntu**
 
 The following setup instructions assume the user is running the following version of Ubuntu:
 - **Ubuntu 20.04**
 
-<br><br>
 
 ### Step 1 - Installing Docker
 The Docker installation package available in the official Ubuntu repository may not be the latest version. To ensure we get the latest version, we'll install Docker from the official Docker repository. To do that, we'll add a new package source, add the GPG key from Docker to ensure the downloads are valid, then install the package
@@ -81,7 +81,8 @@ groups
 <br><br>
 
 ---
-## Fedora
+
+## **Fedora**
 
 The following setup instructions assume the user is running the following version of Fedora:
 - **Fedora 35/34/33/32/31/30**
@@ -140,8 +141,10 @@ The `docker` group is created, but no users are added to the group. Add your use
 sudo usermod -aG docker $(whoami)
 ```
 
+<br>
+
 ---
-## Windows
+## **Windows**
 
 
 ### Pre-requisites
@@ -151,10 +154,14 @@ sudo usermod -aG docker $(whoami)
 Windows Subsystem for Linux (WSL) 2 introduces a significant architectural change as it is a full Linux kernel built by Microsoft, allowing Linux containers to run natively without emulation. With Docker Desktop running on WSL2, users are leverage Linux workspaces and avoid having to maintain both Linux and Windows build scripts. WSL2 provides improvements to file system sharing, boot time, and allows access to some cool new features. 
 
 ### Installation
-Follow the guide by `docker` docs [here](https://docs.docker.com/desktop/windows/install/)
+Follow the guide by `docker` docs [here](https://docs.docker.com/desktop/windows/install/) to install Docker Desktop
+
+<br>
 
 ---
 
-## Acknowledgements
+# Acknowledgements
 
-#### [How To Install and Use Docker on Ubuntu 20.04 - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+###### [How To Install and Use Docker on Ubuntu 20.04 - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+
+<br><br>
