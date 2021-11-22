@@ -9,6 +9,8 @@ description: Docker best practices
 
 ---
 
+![](static/404-page.gif)
+
 For a detailed compilation of Docker best practices, check sysdig's take [here](https://sysdig.com/blog/dockerfile-best-practices/)
 
 
@@ -17,6 +19,8 @@ For a detailed compilation of Docker best practices, check sysdig's take [here](
 Docker builds images automatically by reading the instructions from a `Dockerfile` -- a text file that contains all commands, in order, needed to build a given image. A `Dockerfile` adheres to a specific format and set of instructions which you can find at [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 
 A Docker image consists of read-only layers each of which represents a Dockerfile instruction. Layers are stacked and each one is a delta of the changes from the previous layer. 
+
+
 
 <br>
 

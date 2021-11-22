@@ -17,7 +17,6 @@
           <a  href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">{{ section.title }}</a>
         </li>
         
-        
         {% if section.links and pageUrl contains sectionBase %}
           <ul>
             <li class="collapse show" id="{{ section.title | slugify }}">
@@ -32,7 +31,7 @@
                        class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">{{ entry.title }}
                     </a>
                   </li>
-                  {% if page.url contains entry.url or pageUrl == sectionUrl %}
+                  {% if page.url contains entry.url %}
                     <ul>
                       <li class="collapse show" id="{{ child.title | slugify }}">
                         {% if entry.children %}

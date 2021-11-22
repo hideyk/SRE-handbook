@@ -31,7 +31,7 @@
         - title: "Windows"
           url: "docs/docker/setup#windows"
     - title: "Configure"
-      url: "docs/docker/configure"
+      url: "docs/404-page"
       
     - title: "Common commands"
       url: "docs/docker/common_commands"
@@ -57,9 +57,9 @@
         - title: "Beyond image building"
           url: "docs/docker/best_practices#4-beyond-image-building"
     - title: "Monitor"
-      url: "docs/docker/monitor"
+      url: "docs/404-page"
     - title: "Using Docker in production"
-      url: "docs/docker/production"
+      url: "docs/404-page"
 
 - title: "Extras"
   url: "docs/extras"
