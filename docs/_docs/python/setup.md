@@ -194,6 +194,11 @@ python3 --version
 
 ## **Windows**
 
+Head over to the official [Python downloads page](https://www.python.org/downloads/windows/) and install the relevant full installer for your system. 
+
+Follow the instructions to get the full-featured Python development environment. 
+
+
 
 
 <br><br>
