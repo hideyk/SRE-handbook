@@ -65,7 +65,8 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
 3. Reload the `systemctl` configuration and restart Docker
 ```bash
 sudo systemctl daemon-reload
-
+```
+```bash
 sudo systemctl restart docker.service
 ```
 

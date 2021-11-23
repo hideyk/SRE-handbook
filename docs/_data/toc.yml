@@ -61,6 +61,21 @@
     - title: "Using Docker in production"
       url: "docs/404-page"
 
+- title: "Python"
+  url: "docs/python/index"
+  links:
+    - title: "Introduction"
+      url: "docs/python/index"
+    - title: "Set-Up"
+      url: "docs/python/setup"
+      children:
+        - title: "Ubuntu"
+          url: "docs/python/setup#ubuntu"
+        - title: "Fedora"
+          url: "docs/python/setup#fedora"
+        - title: "Windows"
+          url: "docs/python/setup#windows"
+
 - title: "Extras"
   url: "docs/extras"
   links:
