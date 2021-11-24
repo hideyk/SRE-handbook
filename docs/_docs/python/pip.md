@@ -13,10 +13,9 @@ description: Getting started with Python
 ---
 
 ## Installing packages
-
 <br>
-
 You may install packages using the following format where `python` refers to the Python interpreter you want to install the package for:
+
 ```bash
 python -m pip install PACKAGE==VERSION
 python -m pip install PACKAGE>=VERSION
@@ -33,8 +32,10 @@ Format of the `requirements.txt` file can be found [here](https://pip.pypa.io/en
 ---
 
 ## Installing from Wheels
+<br>
 "Wheels" are built, archive format files that can greatly speed installation compared to building from source archives. 
 To install directly from a wheel archive:
+
 ```bash
 python -m pip install SomePackage-1.0-py2.py3-none-any.whl
 ```
@@ -61,7 +62,9 @@ python -m pip install --no-index --find-links=/local/wheels -r requirements.txt
 ---
 
 ## Uninstalling packages
+<br>
 pip is able to uninstall packages like so:
+
 ```bash
 python -m pip uninstall SomePackage
 ```
@@ -137,3 +140,6 @@ pip can be configured to connect through a proxy server in various ways:
 ## Acknowledgements
 
 #### - [Pip Documentation - The pip developers](https://pip.pypa.io/en/stable/user_guide/)
+
+
+<br><br><br>

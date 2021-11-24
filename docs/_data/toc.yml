@@ -75,6 +75,20 @@
           url: "docs/python/setup#fedora"
         - title: "Windows"
           url: "docs/python/setup#windows"
+    - title: "Pip"
+      url: "docs/python/pip"
+      children:
+        - title: "Installing packages"
+          url: "docs/python/pip#installing-packages"
+        - title: "Installing from Wheels"
+          url: "docs/python/pip#installing-from-wheels"
+        - title: "Uninstalling packages"
+          url: "docs/python/pip#uninstalling-packages"
+        - title: "Configuration"
+          url: "docs/python/pip#configuration"
+        - title: "Proxy server"
+          url: "docs/python/pip#using-a-proxy-server"
+    
 
 - title: "Extras"
   url: "docs/extras"
