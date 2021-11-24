@@ -48,7 +48,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 <br>
 
 ### Step 1.4 - <ins>Install Python 3</ins>
-Now you can install Python 3.8 with the following command:
+Now you can install Python 3.8 along with pip package manager with the following command:
 ```bash
 sudo apt install -y python3.8 python3-pip
 ```
