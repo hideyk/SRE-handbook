@@ -5,6 +5,7 @@ tags:
 description: Getting started with Python
 ---
 
+<a href="http://example.com/" target="_blank">Hello, world!</a>
 
 # Pip package manager 
 
@@ -27,13 +28,19 @@ python -m pip install -r requirements.txt
 ```
 Format of the `requirements.txt` file can be found [here](https://pip.pypa.io/en/stable/reference/requirements-file-format/#requirements-file-format)
 
+Instead of downloading packages from the [Official PyPI repository](https://pypi.org/), you may instead want to download packages from a repository maintained by your organization:
+```bash
+python -m pip install --index-url http://my.package.repo/simple/ SomeProject
+```
+
+
 <br><br>
 
 ---
 
 ## Installing from Wheels
 <br>
-"Wheels" are built, archive format files that can greatly speed installation compared to building from source archives. 
+"Wheels" are built, archive format files that can greatly speed up installation compared to building from source archives. 
 To install directly from a wheel archive:
 
 ```bash

@@ -61,7 +61,7 @@ python3 --version
 
 <br><br>
 
-### **Option 2: Install from source code (when internet connectivity is limited)**
+### **Option 2: Install from source code**
 
 <br>
 
@@ -83,7 +83,7 @@ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-
 <br>
 
 ### Step 2.3 - <ins>Download the latest version of Python source code</ins>
-Change the python version in the download command below to suit your organization's needs. If the server has limited internet connectivity, copy it over using SCP or SFTP from another server in the VPN.
+Change the python version in the download command below to suit your organization's needs. If the server has limited internet connectivity, copy it over using SCP or SFTP from another server in your organization's VPN:
 ```bash
 wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz
 ```
@@ -100,7 +100,7 @@ tar -xvf Python-3.8.3.tgz
 ### Step 2.5 - <ins>Test system and optimize Python
 Before you install the software, make sure you test the system and optimize Python.
 
-The `./configure` command evaluates and prepares Python to install on your system. Using the `--optimization` option speeds code execution by 10-20%.
+The `./configure` command evaluates and prepares Python to install on your system. Using the `--optimization` option speeds code execution by 10-20%:
 
 ```bash
 cd Python-3.8.3
@@ -112,7 +112,7 @@ This step can take up to 30 minutes to complete.
 <br>
 
 ### Step 2.6 - <ins>Install a second instance of Python (recommended)
-To create a second instance of Python, in addition to your current Python installation, enter the following
+To create a second instance of Python, in addition to your current Python installation, enter the following:
 ```bash
 sudo make altinstall
 ```
@@ -136,16 +136,18 @@ The following setup instructions assume the user is running one of the following
 <br>
 
 ### Step 1 - <ins>Install required packages</ins>
-Use the following command to install prerequisite packages for Python. (Failure to run the groupinstall "Development Tools" might result in [this issue](https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python))
+Use the following command to install prerequisite packages for Python:
 ```bash
 sudo yum -y groupinstall "Development Tools"
 sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel zlib-devel wget
 ```
 
+Failure to run the groupinstall "Development Tools" might result in [this issue](https://stackoverflow.com/questions/19816275/no-acceptable-c-compiler-found-in-path-when-installing-python)
+
 <br>
 
 ### Step 2 - <ins>Download the latest version of Python source code</ins>
-Change the python version in the download command below to suit your organization's needs. If the server has limited internet connectivity, copy it over using SCP or SFTP from another server in the VPN.
+Change the python version in the download command below to suit your organization's needs. If the server has limited internet connectivity, copy it over using SCP or SFTP from another server in your organization's VPN:
 ```bash
 wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tgz
 ```
@@ -162,7 +164,7 @@ tar -xvf Python-3.8.3.tgz
 ### Step 4 - <ins>Test system and optimize Python
 Before you install the software, make sure you test the system and optimize Python.
 
-The `./configure` command evaluates and prepares Python to install on your system. Using the `--optimization` option speeds code execution by 10-20%.
+The `./configure` command evaluates and prepares Python to install on your system. Using the `--optimization` option speeds code execution by 10-20%:
 
 ```bash
 cd Python-3.8.3
@@ -174,7 +176,7 @@ This step can take up to 30 minutes to complete.
 <br>
 
 ### Step 5 - <ins>Install a second instance of Python (recommended)
-To create a second instance of Python, in addition to your current Python installation, enter the following
+To create a second instance of Python, in addition to your current Python installation, enter the following:
 ```bash
 sudo make altinstall
 ```
