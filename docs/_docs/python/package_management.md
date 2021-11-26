@@ -38,12 +38,12 @@ Poetry provides a custom installer python script ( `get-poetry.py` <a href="http
 
 <br>
 
-Linux / OSX / Bash on Windows:
+<ins>Linux / OSX / Bash on Windows</ins>
 ```bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
-Powershell:
+<ins>Powershell</ins>
 ```powershell
 (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py -UseBasicParsing).Content | python -
 ```
