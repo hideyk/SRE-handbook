@@ -88,6 +88,23 @@
           url: "docs/python/pip#configuration"
         - title: "Proxy server"
           url: "docs/python/pip#using-a-proxy-server"
+    - title: "Package management - Poetry"
+      url: "docs/python/package_management"
+      children:
+        - title: "Installing Poetry"
+          url: "docs/python/package_management#installing-poetry"
+        - title: "Project Setup"
+          url: "docs/python/package_management#project-setup"
+        - title: "Adding dependencies"
+          url: "docs/python/package_management#adding-dependencies-to-your-project"
+        - title: "Running your project"
+          url: "docs/python/package_management#running-your-project"
+        - title: "Installing dependencies"
+          url: "docs/python/package_management#install-dependencies-for-shared-projects"
+        - title: "Publishing to PyPI"
+          url: "docs/python/package_management#publishing-to-pypi"
+        - title: "Uninstalling Poetry"
+          url: "docs/python/package_management#uninstalling-poetry"
     
 
 - title: "Extras"

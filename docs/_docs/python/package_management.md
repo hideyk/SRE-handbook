@@ -52,6 +52,8 @@ Powershell:
 
 <br><br>
 
+---
+
 ## Project setup
 
 <br>
