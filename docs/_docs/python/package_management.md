@@ -226,7 +226,7 @@ POETRY_UNINSTALL=1 python get-poetry.py         # Option 2
 
 ## Acknowledgements
 
-#### - [Pip Documentation - The pip developers](https://pip.pypa.io/en/stable/user_guide/)
+#### - [Poetry documentation - Python-poetry.org](https://python-poetry.org/docs)
 
 
 <br><br><br>
