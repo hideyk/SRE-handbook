@@ -18,7 +18,7 @@ Linux is the leading operating system on servers (over 96.4% of the top 1 millio
 Linux also runs on embedded systems, i.e. devices whose operating system is typically built into the firmware and is highly tailored to the system. This includes routers, automation controls, smart home technology, televisions (Samsung and LG Smart TVs use Tizen and WebOS respectively), automobiles (for example, Tesla, Audi, Mercedes-Benz, Hyundai and Toyota all rely on Linux), digital video recorders, video game consoles, and smartwatches. 
 
 
-There are tons of Linux distributions which can suit a wide range of usecases; ranging from Ubuntu & RedHat releases for the general user to Kali Linux for the White Hat hacker. See below for the outrageous Linux distribution historical timeline. Its amazing what an open source community is capable of.
+There are tons of Linux distributions to suit different usecases; ranging from Ubuntu & RedHat releases for the general user to Kali Linux for the White Hat hacker. See below for the outrageous Linux distribution historical timeline. Its amazing what an open source community is capable of.
 
 ![](static/linux_distribution_timeline.svg)
 

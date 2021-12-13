@@ -42,6 +42,7 @@ The language's core philosophy is summarized in the document [](), which include
 - Complex is better than complicated
 - Readability counts
 
+<br><br>
 
 ---
 
