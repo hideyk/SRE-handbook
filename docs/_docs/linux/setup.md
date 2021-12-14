@@ -45,7 +45,7 @@ The very first thing you're going to want to do is change the root password. The
 
 <br>
 
-<ins>Change root password</ins>
+### <ins>Change root password</ins>
 
 To change the password of the `root` account, run the following command and enter the default password, you'll be prompted to re-enter the new password:
 
@@ -55,7 +55,7 @@ sudo passwd root
 
 <br>
 
-<ins>Setup password policy - Aging, locking, history, complexity requirements</ins>
+### <ins>Setup password policy - Aging, locking, history, complexity requirements</ins>
 
 a. <a href="https://www.networkworld.com/article/2726217/how-to-enforce-password-complexity-on-linux.html" target="_blank">Change password complexity</a> to require min length `12`, a digit, an uppercase letter, a lowercase letter and a special character. Passwords cannot be reused and `3` old passwords will be remembered:
 
@@ -100,8 +100,17 @@ sudo systemctl restart sshd
 
 <br>
 
-<ins>Create non-privileged user with sudo access</ins>
+### <ins>Create non-privileged user with sudo access</ins>
 
+Create a new user account with home directory created with user id `user-id` and added to group `group`
+```bash
+sudo useradd -m <username> -u <user-id> -g <group>
+```
+
+Change its password with the following command:
+```bash
+sudo passwd <username>
+```
 
 
 To lock the root account password, use the following syntax:
