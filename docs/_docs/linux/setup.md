@@ -120,6 +120,8 @@ sudo passwd -l root
 
 <br><br>
 
+---
+
 ## ii) Network configuration
 <br>
 
@@ -128,7 +130,32 @@ One of the most basic configurations you'll need to make is to enable network co
 - Enable network connectivity by assigning ip address, hostname and DNS server information
 - Turn IPv6 off if unused
 
+<br>
+
+### <ins>Change hostname for your server</ins>
+Whenever you type a website URL into the address bar of your browser, a request is sent to a type of internet server known as a DNS (domain name server). This server takes the URL you typed then checks which specific IP address are listed for the actual servers that host the content you're looking for. 
+
+To <a href="https://www.thegeekstuff.com/2013/10/change-hostname-ip-address/" target="_blank">change the hostname</a> of your server, you may follow the traditional approach of editing the `/etc/hostname` & `/etc/hosts` files and then rebooting the system. Alternatively, a better way would be to use the `hostnamectl set-hostname` program for newer systems to manage setting the hostname:
+
+```bash
+sudo hostnamectl set-hostname <hostname>
+```
+
+Run `hostname` to verify that your hostname has been changed successfully.
+
+
+<br>
+
+For servers in a VPN (Virtual Private Network), you might want to configure a local DNS (Domain Name System) server for namespace mapping of your servers' DNS / FQDN (Fully-Qualified Domain Name). 
+
+Follow <a href="https://www.thegeekstuff.com/2014/01/install-dns-server/" target="_blank">this</a> article to configure your local DNS server.
+
+
+### <ins></ins>
+
 <br><br>
+
+---
 
 ## iii) Package management
 <br>
@@ -138,6 +165,25 @@ Install whatever packages you might need if they aren't part of the distribution
 
 - Install packages required by application
 - Remove packages not required by application
+
+Instead of using the low-level clients (dpkg for Debian-based systems, rpm for RedHat-based systems), we should use the recommended high-level clients (apt for Debian-based systems, yum / dnf for RedHat-based systems). 
+
+<br>
+
+To install Docker on Ubuntu:
+```bash
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+```
+
+To install Docker on RedHat OS:
+```bash
+sudo yum update
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+
+> Note: Remember to update the apt / yum repositories to get information on the newest versions of their packages and their dependencies.
+
 
 <br><br>
 
