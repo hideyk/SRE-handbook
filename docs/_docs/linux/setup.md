@@ -162,9 +162,12 @@ Follow <a href="https://www.thegeekstuff.com/2014/01/install-dns-server/" target
 
 Install whatever packages you might need if they aren't part of the distribution you're using. These could be application packages like PHP, MongoDB, nginx or supporting packages like pear. Likewise, any extraneous packages that can be removed should be removed. All of this should be done through your distribution's package management solution, such as yum or apt for easier management down the road. 
 
+<br>
 
 - Install packages required by application
 - Remove packages not required by application
+
+<br>
 
 Instead of using the low-level clients (dpkg for Debian-based systems, rpm for RedHat-based systems), we should use the recommended high-level clients (apt for Debian-based systems, yum / dnf for RedHat-based systems). 
 
@@ -194,6 +197,77 @@ Once you have the right packages installed, you should make sure everything is u
 
 - Update packages (Kernel and default packages)
 - Set up automatic updates
+
+
+To update and upgrade packages on Ubuntu:
+```bash
+sudo apt update && sudo apt upgrade 
+```
+
+One of the most fundamental ways to keep the server secure is by installing security updates on time to patch vulnerabilities. 
+
+<br><br>
+
+### <ins>Ubuntu</ins>
+
+On Ubuntu, you'll need to <a href="https://www.cyberciti.biz/faq/how-to-set-up-automatic-updates-for-ubuntu-linux-18-04/" target="_blank">install the `unattended-upgrades` package</a>. It will automatically install software and security updates:
+
+```bash
+sudo apt install -y unattended-upgrades apt-listchanges apt-utils bsd-mailx
+```
+
+<br>
+
+Turn on unattended security update:
+```bash
+sudo dpkg-reconfigure -plow unattended-upgrades
+```
+
+<br>
+
+Configure automatic updates in the `/etc/apt/apt.conf.d/50unattended-upgrades` by adding a alert email ID (sysadmin@server1.biz) and automatically rebooting Ubuntu box without confirmation for kernel updates:
+```bash
+sudo vi /etc/apt/apt.conf.d/50unattended-upgrades
+
+# Enter the following within the file - 
+Unattended-Upgrade::Mail "sysadmin@server1.biz";
+Unattended-Upgrade::Automatic-Reboot "true";
+```
+<br>
+
+Edit the `/etc/apt/listchanges.conf` and set an email ID:
+```bash
+email_address=sysadmin@server1.cyberciti.biz
+```
+
+<br>
+
+Finally, verify that automatic updates have been set up properly by running the following command:
+```bash
+sudo unattended-upgrades --dry-run
+```
+
+<br><br>
+
+### <ins>Fedora</ins>
+
+Applying security updates on your Fedora and RHEL box is an essential task for all developers and sysadmin. Hence we need to <a href="https://www.cyberciti.biz/faq/install-enable-automatic-updates-rhel-centos-8/" target="_blank">install and enable dnf-automatic</a>. It is nothing but systemd units that can periodically download package upgrades and apply them.
+
+
+Install the package using the dnf command:
+```bash
+sudo dnf install dnf-automatic
+```
+
+Edit the `/etc/dnf/automatic.conf` as per your requirements and make sure `apply_updates` is set to yes:
+```bash
+sudo vi /etc/dnf/automatic.conf
+```
+
+Finally, turn on the service by using the `systemctl` command:
+```bash
+sudo systemctl enable --now dnf-automatic.timer
+```
 
 <br><br>
 
